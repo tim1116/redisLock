@@ -1,0 +1,10 @@
+{
+    "name": "tim1116/redis-lock",
+    "description": "redis实现分布式锁",
+    "keywords": [
+        "redis",
+        "lock"
+    ],
+    "license": "MIT",
+    "require": {}
+}
