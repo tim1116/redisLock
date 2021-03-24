@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "tim1116\\redisLock\\": "src/redis-lock"
+            "tim1116\\redisLock\\": "src/"
         }
     }
 }
