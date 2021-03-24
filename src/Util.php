@@ -1,8 +1,5 @@
 <?php
-/**
- * File: Util.php
- * PROJECT_NAME: redisLock
- */
+
 
 declare(strict_types=1);
 
