@@ -6,5 +6,20 @@
         "lock"
     ],
     "license": "MIT",
-    "require": {}
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tim Xiao",
+            "email": "scautim@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-redis":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "tim1116\\redisLock\\": "src/redis-lock"
+        }
+    }
 }
