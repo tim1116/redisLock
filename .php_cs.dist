@@ -1,5 +1,4 @@
 <?php
-
 $header = <<<EOF
 This file is part of the redisLock package.
 

@@ -4,7 +4,9 @@
 
 ### Installation
 
-待补充
+```
+composer require tim1116/redis-lock
+```
 
 
 ### 开发指南
