@@ -1,33 +1,34 @@
 <?php
-/**
- * File: RedisSeeting.php
- * PROJECT_NAME: redisLock
+
+/*
+ * This file is part of the redisLock package.
+ *
+ * Author:Tim Xiao
  */
 
 namespace tim1116\redisLock;
 
 /**
  * redis配置类
- * Class RedisSetting
+ * Class RedisSetting.
  */
 class RedisSetting
 {
     public $host = '127.0.0.1';
     public $port = 6379;
     // 连接超时时间 默认3S
-    public $timeout = 3.0;
+    public $timeout  = 3.0;
     public $password = '';
-    public $dbindex = 0;
+    public $dbindex  = 0;
     // 前缀
     public $prefix = 'redisLock:';
 
-    public function __construct(Array $config = [])
+    public function __construct(array $config = [])
     {
         $this->setConfig($config);
     }
 
-
-    public function setConfig(Array $config)
+    public function setConfig(array $config)
     {
         if (isset($config['host'])) {
             $this->host = $config['host'];
@@ -52,6 +53,5 @@ class RedisSetting
         if (isset($config['prefix'])) {
             $this->prefix = $config['prefix'];
         }
-
     }
 }

@@ -1,15 +1,33 @@
 <?php
-/**
- * File: Single.php
- * PROJECT_NAME: redisLock
+
+/*
+ * This file is part of the redisLock package.
+ *
+ * Author:Tim Xiao
  */
 
 namespace tim1116\redisLock\traits;
 
-trait  Single
+trait Single
 {
     private static $instance = null;
 
+    /**
+     * prevent the instance from being cloned (which would create a second instance of it).
+     */
+    private function __clone()
+    {
+    }
+
+    /**
+     * 防止通过反序列化生成类实例.
+     *
+     * $obj1 = Singleton::getInstance();
+     * $obj2= unserialize(serialize($obj1));
+     */
+    private function __wakeup()
+    {
+    }
 
     /**
      * 初始化.
@@ -25,22 +43,5 @@ trait  Single
         }
 
         return static::$instance;
-    }
-
-    /**
-     * prevent the instance from being cloned (which would create a second instance of it)
-     */
-    private function __clone()
-    {
-    }
-
-    /**
-     * 防止通过反序列化生成类实例
-     *
-     * $obj1 = Singleton::getInstance();
-     * $obj2= unserialize(serialize($obj1));
-     */
-    private function __wakeup()
-    {
     }
 }

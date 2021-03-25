@@ -21,5 +21,8 @@
         "psr-4": {
             "tim1116\\redisLock\\": "src/"
         }
+    },
+    "require-dev": {
+        "eaglewu/swoole-ide-helper": "dev-master"
     }
 }
